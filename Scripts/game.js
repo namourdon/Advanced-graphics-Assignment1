@@ -40,7 +40,7 @@ function init() {
     setupRenderer(); // setup the default renderer
     setupCamera(); // setup the camera
     // add an axis helper to the scene
-    axes = new AxisHelper(20);
+    axes = new AxisHelper(30);
     scene.add(axes);
     //Add a Plane to the Scene
     planeGeometry = new PlaneGeometry(100, 100);
@@ -129,6 +129,11 @@ function init() {
     console.log("Added Spot Light to Scene");
     document.body.appendChild(renderer.domElement);
     renderer.render(scene, camera);
+    
+    //add controls
+    gui= new GUI();
+    control= new control(0.02,0.03);
+    addControl(control);
 }
 // Setup default renderer
 function setupRenderer() {
@@ -147,4 +152,23 @@ function setupCamera() {
     camera.lookAt(scene.position);
     console.log("Finished setting up Camera...");
 }
+
+function addControl (controlObject){
+    gui.add(controlObject, 'rotationSpeed',0,0.5);
+    
+}
+function gameLoop() {
+    stats.update();
+    //animate cube
+    cube.rotation.x += control.rotationSpeed;
+    cube.rotation.y += control.rotationSpeed;
+    cube.rotation.z += control.rotationSpeed;
+    
+    // render using requestAnimationFrame
+    requestAnimationFrame(gameLoop);
+    // render the scene
+    renderer.render(scene, camera);
+}
+// Setup default renderer
+
 //# sourceMappingURL=game.js.map
