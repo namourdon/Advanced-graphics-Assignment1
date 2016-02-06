@@ -1,13 +1,13 @@
 {
-  "name": "comp392lesson01-part2",
+  "name": "comp392-lesson3-demo",
   "authors": [
     "Tom Tsiliopoulos <tsiliopoulos@hotmail.com>"
   ],
-  "description": "COMP392Lesson01-Part1 for Advanced Graphics",
+  "description": "COMP392-Lesson3-Demo for Advanced Graphics",
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "http://github.com/CentennialCollege/COMP392-Lesson01-Part2",
+  "homepage": "https://github.com/CentennialCollege/COMP392-Lesson3-Demo",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,7 +17,7 @@
     "Scripts/lib"
   ],
   "dependencies": {
-    "three.js": "~0.72.0",
+    "three.js": "threejs#*",
     "dat-gui": "~0.5.1",
     "stats.js": "*",
     "threex.colliders": "*"
