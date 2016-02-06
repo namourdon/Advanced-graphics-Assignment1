@@ -1,3 +1,3 @@
-#COMP392-Lesson3-Demo
+#COMP392-Assignment1
 
-COMP392-Lesson3-Demo for COMP392 - Advanced Graphics @ Centennial College
+COMP392-Advanced Graphics-Assignment1 @ Centennial College
